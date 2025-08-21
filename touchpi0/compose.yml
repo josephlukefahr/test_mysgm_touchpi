@@ -1,0 +1,8 @@
+---
+services:
+  dht:
+    image: ghcr.io/savoirfairelinux/opendht/opendht:v3.5.2
+    ports:
+      - "4222:4222/udp"
+    command: ["dhtnode", "-p", "4222", "-D", "-v", "-s"]
+    restart: unless-stopped
